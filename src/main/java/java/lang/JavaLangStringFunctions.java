@@ -9,6 +9,8 @@ import java.nio.charset.UnsupportedCharsetException;
 /**
  * Utility class for exposing package-private functionality of
  * {@link java.lang} while wrapping legacy exceptions.
+ *
+ * @author Michael Bisgaard Olesen
  */
 public class JavaLangStringFunctions {
 	

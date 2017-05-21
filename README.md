@@ -11,3 +11,5 @@ Various useful package-private features in the
 Upcoming features are string slicing,
 efficient utilities for constructing and iterating strings,
 and much more.
+
+The only dependencies of the project are JDK 1.5+ and [primitivo](https://github.com/halleknast/primitivo).

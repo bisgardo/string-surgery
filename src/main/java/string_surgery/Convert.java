@@ -6,7 +6,10 @@ import primitivo.iterate.IntIterator;
 
 import java.nio.charset.Charset;
 
-public class Converters {
+/**
+ * @author Michael Bisgaard Olesen
+ */
+public class Convert {
 	
 	public static byte[] bytesOf(char[] chars, Charset charset) {
 		return JavaLangStringFunctions.charsToBytes(chars, charset);
