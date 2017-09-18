@@ -20,8 +20,7 @@ public class SingleChar implements ExtendedCharSequence, Serializable {
 		if (input == null) {
 			throw new NullPointerException("input");
 		}
-		char character = input.charAt(index);
-		return new SingleChar(character);
+		return new SingleChar(input.charAt(index));
 	}
 	
 	public char getChar() {

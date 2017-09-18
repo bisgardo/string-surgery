@@ -48,22 +48,22 @@ public class IndexFunctions {
 		}
 	}
 	
-	public static int checkIndices(CharSequence input, int fromIndex, int toIndex) {
+	public static void checkIndices(CharSequence input, int fromIndex, int toIndex) {
 		if (input == null) {
 			throw new NullPointerException("input");
 		}
-		return checkIndices(input.length(), fromIndex, toIndex);
+		checkIndices(input.length(), fromIndex, toIndex);
 	}
 	
-	public static int checkIndices(int inputLength, int fromIndex, int toIndex) {
-		if (fromIndex > toIndex) {
-			throw new StringIndexOutOfBoundsException("from index = " + fromIndex + " > " + toIndex + " = to index");
+	public static void checkIndices(int inputLength, int fromIndex, int toIndex) {
+		if (fromIndex < 0) {
+			throw new StringIndexOutOfBoundsException(fromIndex + " < 0");
 		}
-		
-		checkIndex(inputLength, fromIndex);
-		if (fromIndex < toIndex) {
-			checkIndex(inputLength, toIndex);
+		if (toIndex < fromIndex) {
+			throw new StringIndexOutOfBoundsException("fromIndex = " + fromIndex + " > " + toIndex + " = toIndex");
 		}
-		return toIndex - fromIndex;
+		if (inputLength < toIndex) {
+			throw new StringIndexOutOfBoundsException(toIndex + " > " + inputLength);
+		}
 	}
 }

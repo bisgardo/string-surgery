@@ -3,6 +3,8 @@ package string_surgery.chars;
 import primitivo.iterate.CharIterator;
 import primitivo.iterate.IntIterator;
 
+import java.util.NoSuchElementException;
+
 /**
  * @author Michael Bisgaard Olesen
  */
@@ -26,6 +28,9 @@ public class CharsIteration {
 			
 			@Override
 			public char nextChar() {
+				if (!hasNext()) {
+					throw new NoSuchElementException();
+				}
 				return charSequence.charAt(index++);
 			}
 		};
@@ -49,6 +54,9 @@ public class CharsIteration {
 			
 			@Override
 			public int nextInt() {
+				if (!hasNext()) {
+					throw new NoSuchElementException();
+				}
 				int codePoint = Character.codePointAt(charSequence, index);
 				index += Character.charCount(codePoint);
 				return codePoint;

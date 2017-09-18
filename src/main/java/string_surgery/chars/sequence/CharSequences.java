@@ -44,7 +44,9 @@ public class CharSequences {
 			return input;
 		}
 		
-		int length = IndexFunctions.checkIndices(inputLength, fromIndex, toIndex);
+		IndexFunctions.checkIndices(inputLength, fromIndex, toIndex);
+		
+		int length = toIndex - fromIndex;
 		if (length == 0) {
 			// Optimization that is weirdly absent in `String#substring`.
 			return empty();
