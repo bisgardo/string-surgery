@@ -4,10 +4,9 @@ import primitivo.iterate.CharIterator;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.io.Writer;
 
 // TODO Add `SingleCodePoint`?
-public class SingleChar implements ExtendedCharSequence, Serializable {
+public class SingleChar implements AppendingCharSequence, Serializable {
 	private static final long serialVersionUID = -8488207078567828258L;
 	
 	private final char character;
@@ -82,8 +81,8 @@ public class SingleChar implements ExtendedCharSequence, Serializable {
 	}
 	
 	//@Override
-	public void writeTo(Writer writer) throws IOException {
-		writer.write(character);
+	public void appendTo(Appendable appendable) throws IOException {
+		appendable.append(character);
 	}
 	
 	//@Override

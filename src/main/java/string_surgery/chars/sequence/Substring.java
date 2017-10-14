@@ -5,10 +5,9 @@ import string_surgery.chars.function.IndexFunctions;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.io.Writer;
 import java.util.NoSuchElementException;
 
-public class Substring implements ExtendedCharSequence, Serializable {
+public class Substring implements AppendingCharSequence, Serializable {
 	private static final long serialVersionUID = 4697708162472844808L;
 	
 	private final String string;
@@ -81,8 +80,8 @@ public class Substring implements ExtendedCharSequence, Serializable {
 	}
 	
 	//@Override
-	public void writeTo(Writer writer) throws IOException {
-		writer.write(string, offset, length);
+	public void appendTo(Appendable appendable) throws IOException {
+		appendable.append(string, offset, offset + length);
 	}
 	
 	//@Override
