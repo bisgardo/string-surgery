@@ -1,4 +1,4 @@
-package string_surgery.chars.sequence;
+package string_surgery.sequence;
 
 import java.io.IOException;
 

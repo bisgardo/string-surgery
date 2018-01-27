@@ -1,4 +1,4 @@
-package string_surgery.chars.function;
+package string_surgery.function;
 
 public class IndexFunctions {
 	

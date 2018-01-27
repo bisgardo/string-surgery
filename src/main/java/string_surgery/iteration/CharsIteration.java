@@ -1,4 +1,4 @@
-package string_surgery.chars;
+package string_surgery.iteration;
 
 import primitivo.iterate.CharIterator;
 import primitivo.iterate.IntIterator;

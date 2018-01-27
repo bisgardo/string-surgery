@@ -1,7 +1,7 @@
-package string_surgery.chars.sequence;
+package string_surgery.sequence;
 
 import primitivo.iterate.CharIterator;
-import string_surgery.chars.function.IndexFunctions;
+import string_surgery.function.IndexFunctions;
 
 import java.io.IOException;
 import java.io.Serializable;

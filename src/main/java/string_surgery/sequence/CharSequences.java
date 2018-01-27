@@ -1,6 +1,6 @@
-package string_surgery.chars.sequence;
+package string_surgery.sequence;
 
-import string_surgery.chars.function.IndexFunctions;
+import string_surgery.function.IndexFunctions;
 
 import java.nio.charset.Charset;
 
